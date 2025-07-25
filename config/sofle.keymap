@@ -22,9 +22,9 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        adjust_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <ADJUST>;
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 
@@ -44,9 +44,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-
             display-name = "default";
-
             bindings = <
 &kp GRAVE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5                                 &kp NUMBER_6  &kp NUMBER_7       &kp NUMBER_8   &kp NUMBER_9   &kp NUMBER_0  &backspace_delete
 &kp ESC         &kp Q         &kp W         &kp E         &kp R             &kp T                                        &kp Y         &kp U              &kp I          &kp O          &kp P         &kp ENTER
@@ -61,9 +59,7 @@
         };
 
         lower_layer {
-
             display-name = "lower";
-
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                               &kp F7     &kp F8          &kp F9          &kp F10           &kp F11            &kp F12
 &none   &none   &none   &none   &none   &none                                &none      &none           &kp UP_ARROW    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
@@ -78,9 +74,7 @@
         };
 
         raise_layer {
-
             display-name = "raise";
-
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none      &none     &none     &none      &none  &none
 &none       &none         &kp PSCRN     &none         &none         &none                         &kp PG_UP  &none     &kp UP    &none      &none  &none
@@ -95,9 +89,7 @@
         };
 
         adjust_layer {
-
             display-name = "adjust";
-
             bindings = <
 &bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                     &out OUT_TOG  &none  &none  &none  &none  &studio_unlock
 &ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                  &none         &none  &none  &none  &none  &none
