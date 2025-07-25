@@ -23,8 +23,8 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <ADJUST>;
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 
@@ -60,7 +60,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
                 <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
@@ -82,7 +82,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
                 <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
@@ -103,7 +103,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
                 <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
